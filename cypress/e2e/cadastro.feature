@@ -4,8 +4,9 @@ Funcionalidade: Cadastrar novo usuário
 Contexto: Acessar funcionalidade de cadastro
   Dado que acessei a funcionalidade de cadastro
 
+@mock
 Cenário: Deve ser possível cadastrar um usuário com sucesso 
-  Quando informo um nome válido "<nome>"
+  Quando informo um nome válido "usuario"
   E informo um email válido
   E informo uma senha válida
   E informo novamente a senha
@@ -51,7 +52,8 @@ Cenário: Não deve ser possivel cadastro com as senhas divergentes
   |   senha   |          alerta            |
   |   111113  | As senhas devem ser iguais.|
   |   111112  | As senhas devem ser iguais.|
-   
+
+@mock  
 Cenário: Não deve ser possível registrar um usuario com email ja cadastrado
   Quando informo um nome1
   E informo um email existente
@@ -59,3 +61,4 @@ Cenário: Não deve ser possível registrar um usuario com email ja cadastrado
   E informo novamente a senha
   E confirmo a operação
   Então visualizo a mensagem de erro e-mail existe
+
